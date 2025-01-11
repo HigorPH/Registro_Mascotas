@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <title>Guardería</title>
+  </head>
+
+  <style>
+    /* Estilo para las imágenes del carrusel */
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+
+  .service-image {
+    width: 100%;
+    height: 400px; /* Ajusta la altura que desees */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+  }
+  
+    /* Contenedor para el carrusel */
+    .carousel-inner {
+      max-height: 400px; /* Ajusta la altura máxima del carrusel */
+      overflow: hidden;  /* Oculta cualquier parte de la imagen que sobresalga */
+    }
+  </style>
+  
+  <body>
+
+    <header class="bg-primary text-white py-3">
+      <div class="container">
+        <h1 class="text-center" id="service">Hogar para todos</h1>
+        <nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#form">Reservar</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mt-5">
+      <section id="services">
+        <h2 class="text-center mb-4">Servicios:</h2>
+        <h2 class="text-center"> Haga click en las imagenes</h2>
+
+        <!-- Carrusel de Bootstrap -->
+        <div id="serviceCarousel" class="carousel slide" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./fotos/Guarderia-mascotas.jpg" alt="Guardería" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="Guarderia-mascotas.jpg" data-title="Guardería" data-description="Un lugar seguro y cómodo donde las mascotas pueden quedarse mientras sus dueños están fuera. Ofrecemos alojamiento, comida y atención personalizada, garantizando el bienestar de tu mascota." />
+            </div>
+            <div class="carousel-item">
+              <img src="./fotos/Paseo.jpg" alt="paseos" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="Paseo.jpg" data-title="Paseos" data-description="Servicios de paseo al aire libre para que tu mascota se ejercite, socialice y explore el entorno. Los paseos son guiados por profesionales que cuidan de la seguridad y felicidad de tu mascota." />
+            </div>
+            <div class="carousel-item">
+              <img src="./fotos/Vet.jpg" alt="cuidado" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="vet.jpg" data-title="Cuidado Veterinario" data-description="Atención médica integral para tus mascotas, que incluye chequeos regulares, vacunación, tratamientos, y emergencias. Nuestro equipo de veterinarios asegura la salud y bienestar de tu mascota." />
+            </div>
+            <div class="carousel-item">
+              <img src="./fotos/Servicio.png" alt="Servicios" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="dada.png" data-title="Servicios Adicionales" data-description="Si usted escoge Guarderia, recibirá servicios adicionales que usted puede escoger. Solo abra y seleccione paseo y luego vuelva a seleccionar guarderia y ahí le mostrara. Para consiguiente en las imagenes, los servicios especiales: " />
+            </div>
+
+            <div class="carousel-item">
+                <img src="./fotos/banodeperrosveterinariaofertas.jpg" alt="Baño" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="banodeperrosveterinariaofertas.jpg" data-title="Baño para mascotas" data-description="Un servicio de baño y cuidado higiénico para tu mascota. Utilizamos productos especializados y técnicas que aseguran que tu mascota se sienta fresca y limpia." />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./fotos/corte.jpg" alt="corte" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="corte.jpg" data-title="Servicio de peluquería" data-description="Un servicio de peluquería para tu mascota, que incluye corte de pelo según la raza y el estilo, así como otros tratamientos de estética, para que tu mascota luzca siempre impecable." />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./fotos/Masajes-para-perros-1.jpeg" alt="masajes" class="d-block w-100 service-image" data-bs-toggle="modal" data-bs-target="#serviceModal" data-image="Masajes-para-perros-1.jpeg" data-title="Masajes para mascotas" data-description="Tratamientos de masajes terapéuticos que ayudan a relajar y aliviar el estrés de tu mascota, mejorando su circulación y bienestar general. Ideal para mascotas con tensión muscular o simplemente para consentirlas." />
+              </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Modal para mostrar detalles de cada servicio -->
+        <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalLabel">Servicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img id="modal-image" src="" alt="" class="img-fluid mb-3" />
+                <h5 id="modal-title"></h5>
+                <p id="modal-description"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <br>
+
+      <section id="form">
+        <h2 class="text-center mb-4">Reserva un servicio</h2>
+        <form id="reservation-form" class="shadow p-4 rounded border">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre del dueño:</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="pet" class="form-label">Nombre de la mascota:</label>
+            <input type="text" id="pet" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="service" class="form-label">Servicio:</label>
+            <select id="elementos" class="form-select" required>
+              <option value="guarderia">Guardería</option>
+              <option value="paseos">Paseos</option>
+              <option value="cuidado">Cuidado Veterinario</option>
+            </select>
+          </div>
+          <div id="extra-services" class="mb-3" style="display: none;">
+            <p>¿Desea algún servicio especial?</p>
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="baño"> Baño
+            </label>
+            <label class="form-check-label ms-3">
+              <input type="checkbox" class="form-check-input" value="corte"> Corte de cabello
+            </label>
+            <label class="form-check-label ms-3">
+              <input type="checkbox" class="form-check-input" value="masaje"> Masajes
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Fecha:</label>
+            <input type="date" id="date" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Reservar</button>
+        </form>
+        <br><br>
+        <p id="message" class="mt-3 text-center alert alert-success"></p>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-3">
+      <div class="container text-center">
+        <p>© 2024 Hogar para Todos - Todos los derechos reservados</p>
+      </div>
+    </footer>
+    <br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="funciones.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/* Reset básico */
+
+header {
+    background: #ffcc80;
+    color: #333;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  #services {
+    display: flex; /* Coloca los servicios en línea */
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no hay espacio */
+    gap: 20px; /* Espaciado entre los elementos */
+    justify-content: center; /* Centra los servicios en el contenedor */
+    padding: 20px;
+  }
+  
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+  }
+  
+  
+  /* Texto dentro de las tarjetas */
+  .service-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .carousel-inner {
+    max-height: 400px; /* Ajusta la altura máxima del carrusel */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background: #e68900;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Contenedor de la lista de usuarios */
+  #registered-users {
+    border: 2px solid #2196F3; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    background-color: #f0f8ff; /* Fondo claro */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar la sección */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Título de la sección */
+  #registered-users h2 {
+    text-align: center; /* Centrar título */
+    font-size: 20px; /* Tamaño del texto */
+    color: #333; /* Color oscuro */
+    margin-bottom: 10px; /* Separación del título */
+  }
+  
+  /* Lista no ordenada */
+  #registered-users ul {
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0; /* Quitar padding */
+    margin: 0; /* Quitar margen */
+  }
+  
+  #registered-users ul li {
+    padding: 10px; 
+    margin-bottom: 8px; 
+    background-color: #9c1717; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    color: #333; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  /* Último elemento sin margen inferior */
+  #registered-users ul li:last-child {
+    margin-bottom: 0;
+  }
+  
